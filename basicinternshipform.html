@@ -1,30 +1,83 @@
+<!DOCTYPE html>
 <html>
-<head><title>Intership form</title></head>
-<body background="https://st.depositphotos.com/1784348/56795/i/450/depositphotos_567952872-stock-photo-illustration-blue-gradient-diamonds-diagonally.jpg">
-
-	<form action="form submit.html" method="post" target="_blank" width>
-    <p><em><big><font color="white">INTERSTED STUDENT CAN FILL THE FORM</font></p></em></big>
-	
-		<legend><font color="white" size="4">Single sign-on registration form</font></legend>
-		<label><font color="white">First name:</font></label><input type="text" name="name" reqired autofocus><br>
-		<label><font color="white">Last name:</font></label><input type="text" name="name"><br>
-		<label><font color="white">Address:</font></label><input type="text" name="address"><br>
-	    <label><font color="white">username:</font></label><input type="text" name="username"><br>
-	    <label><font color="white">password:</font></label><input type="password" name="password"><br><br>
-	    <label><font color="white">Email:</font></label><input type="email" name="email"><br>
-	    <label><font color="white">Intersted:</font></label>
-	    <input type="radio" value="yes">yes
-	   <input type="radio" name="no">no<br>
-	   <label><font color="white">gender:</font></label>
-	   <input type="radio" name="gender" value="male">male
-	   <input type="radio" name="gender" value="female">female
-	   <input type="radio" name="gender" value="other">other<br>
-	   <label><font color="white">Date:</font></label><input type="date" name="birthdate"><br>
-	   <label><font color="white">Contact no:</font></label><input type="number" name="contact no"pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"placeholder="format: 123-123-1234"><br>
-	   <input type="submit" value="submit">
-	   <input type="reset" value="reset">
-
-	
-</form>
+<head>
+    <title>Internship Form</title>
+    <style>
+        body {
+            background-image: url('https://st.depositphotos.com/1784348/56795/i/450/depositphotos_567952872-stock-photo-illustration-blue-gradient-diamonds-diagonally.jpg');
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+        form {
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            margin: 50px auto;
+        }
+        label, input, legend {
+            display: block;
+            margin-bottom: 10px;
+        }
+        legend {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        input[type="radio"] {
+            display: inline;
+        }
+        input[type="submit"], input[type="reset"] {
+            width: 100px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="form_submit.html" method="post" target="_blank">
+        <legend>Single Sign-On Registration Form</legend>
+        
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first-name" required autofocus>
+        
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="last-name" required>
+        
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required>
+        
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label>Interested:</label>
+        <input type="radio" id="interested-yes" name="interested" value="yes">
+        <label for="interested-yes">Yes</label>
+        <input type="radio" id="interested-no" name="interested" value="no">
+        <label for="interested-no">No</label>
+        
+        <label>Gender:</label>
+        <input type="radio" id="gender-male" name="gender" value="male">
+        <label for="gender-male">Male</label>
+        <input type="radio" id="gender-female" name="gender" value="female">
+        <label for="gender-female">Female</label>
+        <input type="radio" id="gender-other" name="gender" value="other">
+        <label for="gender-other">Other</label>
+        
+        <label for="birthdate">Date of Birth:</label>
+        <input type="date" id="birthdate" name="birthdate" required>
+        
+        <label for="contact-no">Contact Number:</label>
+        <input type="tel" id="contact-no" name="contact-no" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="format: 123-123-1234" required>
+        
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
 </body>
 </html>
